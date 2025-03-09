@@ -10,6 +10,7 @@ using System.Windows.Media;
 using YAPA.Shared.Contracts;
 using YAPA.WPF.Shared.Shared;
 
+
 namespace YAPA.Plugins.MinimizeToTray
 {
     public class SystemTrayPlugin : IPluginMeta

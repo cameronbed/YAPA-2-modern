@@ -312,6 +312,15 @@ namespace YAPA.Shared.Common
             }
             else
             {
+                if (!_settings.ContainsKey(plugin))
+                {
+                    Console.WriteLine($"Plugin key '{plugin}' not found in settings.");
+                }
+                else if (!_settings[plugin].ContainsKey(name))
+                {
+                    Console.WriteLine($"Name key '{name}' not found in plugin '{plugin}' settings.");
+                }
+
                 _settings.SetValue(name, plugin, value);
                 // ReSharper disable once ExplicitCallerInfoArgument
                 OnPropertyChanged($"{plugin}.{name}");
